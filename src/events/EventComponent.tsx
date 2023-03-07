@@ -11,6 +11,7 @@ const EventComponent: React.FC = () => {
   };
   return (
     <div>
+      <h3>onChange event</h3>
       {/* <input onChange={(e)=>console.log(e)} /> */}
       <input onChange={onChange} />
       <h3>Drag event</h3>
