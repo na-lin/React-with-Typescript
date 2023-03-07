@@ -14,11 +14,11 @@ const UserSearch: React.FC = () => {
   const [user, setUser] = useState<{ name: string; age: number } | undefined>();
 
   useEffect(() => {
-    if (!inputRef.current) {
-      return;
-    }
-    inputRef.current.focus();
-    // inputRef.current?.focus();
+    // if (!inputRef.current) {
+    //   return;
+    // }
+    // inputRef.current.focus();
+    inputRef.current?.focus();
   }, []);
 
   const onClick = () => {
