@@ -1,7 +1,14 @@
 import React from "react";
 
-function App() {
-  return <div className="App">Hi there from redux with typescript</div>;
-}
+import RepositoriesList from "./RepositoriesList";
+
+const App: React.FC = () => {
+  return (
+    <div>
+      <h3>Search for Repositories</h3>
+      <RepositoriesList />
+    </div>
+  );
+};
 
 export default App;
