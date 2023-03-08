@@ -8,7 +8,6 @@ const RepositoriesList: React.FC = () => {
   const { loading, data, error } = useTypedSelector(
     (state) => state.repositories
   );
-  console.log(data);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTerm(event.target.value);
@@ -26,6 +25,15 @@ const RepositoriesList: React.FC = () => {
         <input value={term} onChange={handleChange} />
         <button>Search</button>
       </form>
+      {error && <h3>{error}</h3>}
+      {loading && <h3>loading...</h3>}
+      {!error && !loading && (
+        <ul>
+          {data.map((name) => {
+            return <li key={name}>{name}</li>;
+          })}
+        </ul>
+      )}
     </div>
   );
 };
